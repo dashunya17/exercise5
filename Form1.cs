@@ -1,3 +1,6 @@
+using System;
+using System.Windows.Forms;
+
 namespace Forms5
 {
     public partial class Form1 : Form
@@ -24,12 +27,10 @@ namespace Forms5
             for (int i = 0; i < 5; i++)
                 listBefore.Items.Add($"a[{i}] = {arr[i]}");
 
-           
-            int last = arr[4];  
-            for (int i = 4; i > 0; i--)  
+            int last = arr[4];
+            for (int i = 4; i > 0; i--)
                 arr[i] = arr[i - 1];
-            arr[0] = last; 
-
+            arr[0] = last;
 
             listAfter.Items.Clear();
             for (int i = 0; i < 5; i++)
